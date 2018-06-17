@@ -5,7 +5,7 @@ runner_type: action-chain
 entry_point: chains/chain_test_inquiry.yaml
 enabled: true
 parameters:
-  comment:
+  comment_text:
     type: "string"
     required: true
   status:
