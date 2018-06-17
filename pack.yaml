@@ -1,0 +1,10 @@
+---
+ref: first_pack
+name: first pack
+description: Simple pack.
+keywords:
+    - example
+    - test
+version: 0.1.0
+author: StackStorm, Inc.
+email: info@stackstorm.com
