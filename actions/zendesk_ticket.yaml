@@ -1,8 +1,8 @@
 ---
-name: chain-test-inquiry
-description: A basic ActionChain workflow illustrating the use of Inquiries
+name: zendesk-tkt-update
+description: A basic ActionChain workflow illustrating the use of zendesk actions
 runner_type: action-chain
-entry_point: chains/chain_test_inquiry.yaml
+entry_point: chains/chain_zendesk_tkt.yaml
 enabled: true
 parameters:
   comment_text:

@@ -1,10 +1,10 @@
 ---
-ref: first_pack
-name: first pack
-description: Simple pack.
+ref: zendesk-tkt
+name: zendesk tucket update pack
+description: zendesk tucket update pack.
 keywords:
-    - example
-    - test
+    - zendesk
+    - ticket
 version: 0.1.0
-author: StackStorm, Inc.
-email: info@stackstorm.com
+author: Cloudcover.
+email: lokesh@cloudcover.in

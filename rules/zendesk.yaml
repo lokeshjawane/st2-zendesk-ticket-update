@@ -1,7 +1,7 @@
 ---
-    name: "zendesk_rule_with_webhook"
-    pack: "first_pack"
-    description: "Rule to update the zendesk tickke"
+    name: "zendesk_tkt_update_webhook"
+    pack: "zendesk-tkt"
+    description: "Rule to update the zendesk ticket"
     enabled: true
 
     trigger:
@@ -15,7 +15,7 @@
 #            type: "equals"
 
     action:
-        ref: first_pack.chain-test-inquiry
+        ref: zendesk-tkt.zendesk-tkt-update
         parameters:
             status: "{{trigger.body.status}}"
             id: "{{trigger.body.id}}"
