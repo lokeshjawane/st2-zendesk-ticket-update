@@ -4,7 +4,6 @@ chain:
   - name: task1
     ref: core.ask
       cmd: "echo \"sddsd\" >> /tmp/task1"
-    on-success: "task2"
 
 #  - name: task2
 #    ref: core.local
