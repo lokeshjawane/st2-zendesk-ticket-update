@@ -15,7 +15,7 @@
 #            type: "equals"
 
     action:
-        ref: zendesk_tkt.zendesk_tk_update
+        ref: zendesk_tkt.zendesk_tkt_update
         parameters:
             status: "{{trigger.body.status}}"
             id: "{{trigger.body.id}}"
