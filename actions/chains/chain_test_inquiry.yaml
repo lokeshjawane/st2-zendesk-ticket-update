@@ -5,6 +5,6 @@ chain:
       cmd: "echo {{key1}} >> /tmp/task1"
     on-success: "task2"
 
-  - name: task2
-    ref: core.local
-      cmd: "echo {{key2}} >> /tmp/task2"
+#  - name: task2
+#    ref: core.local
+#      cmd: "echo {{key2}} >> /tmp/task2"
