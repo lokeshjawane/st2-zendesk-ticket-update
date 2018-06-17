@@ -1,6 +1,6 @@
 ---
     name: "zendesk_tkt_update_webhook"
-    pack: "zendesk-tkt"
+    pack: "zendesk_tkt"
     description: "Rule to update the zendesk ticket"
     enabled: true
 
@@ -15,7 +15,7 @@
 #            type: "equals"
 
     action:
-        ref: zendesk-tkt.zendesk-tkt-update
+        ref: zendesk_tkt.zendesk_tk_update
         parameters:
             status: "{{trigger.body.status}}"
             id: "{{trigger.body.id}}"

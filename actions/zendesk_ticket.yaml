@@ -1,5 +1,5 @@
 ---
-name: zendesk-tkt-update
+name: zendesk_tkt_update
 description: A basic ActionChain workflow illustrating the use of zendesk actions
 runner_type: action-chain
 entry_point: chains/chain_zendesk_tkt.yaml
