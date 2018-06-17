@@ -1,10 +1,16 @@
 ---
-chain:
-
-  - name: task1
-    ref: core.ask
-      cmd: "echo \"sddsd\" >> /tmp/task1"
-
-#  - name: task2
-#    ref: core.local
-#      cmd: "echo {{key2}} >> /tmp/task2"
+    chain:
+        -
+            name: "c1"
+            ref: "core.local"
+            parameters:
+                cmd: "echo c1"
+            on-success: "c2"
+            on-failure: "c4"
+        -
+            name: "c2"
+            ref: "core.local"
+            parameters:
+                cmd: "echo \"c2: parent exec is {{action_context.parent.execution_id}}.\""
+            on-success: "c3"
+            on-failure: "c4"
