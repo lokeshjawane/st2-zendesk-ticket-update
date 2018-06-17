@@ -4,10 +4,10 @@
             name: "c1"
             ref: "core.local"
             parameters:
-                cmd: "echo c1 >> /tmp/c1"
+                cmd: "echo {{key1}} >> /tmp/c1"
             on-success: "c2"
         -
             name: "c2"
             ref: "core.local"
             parameters:
-                cmd: "echo \"c2: parent exec is {{action_context.parent.execution_id}}.\" >> /tmp/c2"
+                cmd: "echo \"c2: parent exec is {{key1}}  {{action_context.parent.execution_id}}.\" >> /tmp/c2"
