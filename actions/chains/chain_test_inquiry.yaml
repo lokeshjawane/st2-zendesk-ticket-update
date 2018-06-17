@@ -11,6 +11,7 @@
             ref: "core.local"
             parameters:
                 cmd: "echo \"c2: parent exec is {{key1}}  {{action_context.parent.execution_id}}.\" >> /tmp/c2"
+            on-success: "status"
         -
             name: "status"
             ref: "zendesk.update_ticket_status"
