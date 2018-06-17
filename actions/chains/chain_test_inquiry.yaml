@@ -2,18 +2,9 @@ chain:
 
   - name: task1
     ref: core.ask
-    params:
-      route: developers
-      schema:
-        type: object
-        properties:
-          secondfactor:
-            type: string
-            description: Please enter second factor for authenticating to "foo" service
-            required: True
+      cmd: "echo {{key1}} >> /tmp/task1"
     on-success: "task2"
 
   - name: task2
     ref: core.local
-    params:
-      cmd: echo "We can now authenticate to "foo" service with {{ task1.result.response.secondfactor }}"
+      cmd: "echo {{key2}} >> /tmp/task2"
