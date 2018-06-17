@@ -11,10 +11,10 @@
             ref: "core.local"
             parameters:
                 cmd: "echo \"c2: parent exec is {{key1}}  {{action_context.parent.execution_id}}.\" >> /tmp/c2"
-            on-success: "status"
+            on-success: "tiket_status"
         -
-            name: "status"
+            name: "ticket_status"
             ref: "zendesk.update_ticket_status"
             parameters:
-              status: "solved"
-              ticket_id: "2"
+              status: "{{status}}"
+              ticket_id: "{{id}}"
