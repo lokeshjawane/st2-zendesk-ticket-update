@@ -1,0 +1,22 @@
+---
+    name: "zendesk_rule_with_webhook"
+    pack: "first_pack"
+    description: "Rule to update the zendesk tickke"
+    enabled: true
+
+    trigger:
+        type: "core.st2.webhook"
+        parameters:
+            url: "zendesk"
+
+#    criteria:
+#        trigger.body.name:
+#            pattern: "st2"
+#            type: "equals"
+
+    action:
+        ref: first_pack.chain-test-inquiry
+        parameters:
+            status: "{{trigger.body.status}}"
+            id: "{{trigger.body.id}}"
+            comment: "{{trigger.body.comment}}"

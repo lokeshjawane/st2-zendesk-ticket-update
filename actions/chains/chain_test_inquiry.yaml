@@ -1,17 +1,14 @@
 ---
     chain:
         -
-            name: "c1"
-            ref: "core.local"
+            name: "ticket_comment"
+            ref: "zendesk.update_ticket"
             parameters:
-                cmd: "echo {{key1}} >> /tmp/c1"
-            on-success: "c2"
-        -
-            name: "c2"
-            ref: "core.local"
-            parameters:
-                cmd: "echo \"c2: parent exec is {{key1}}  {{action_context.parent.execution_id}}.\" >> /tmp/c2"
+              comment: "{{comment}}"
+              ticket_id: "{{id}}"
+              public: true
             on-success: "ticket_status"
+
         -
             name: "ticket_status"
             ref: "zendesk.update_ticket_status"
