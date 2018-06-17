@@ -11,3 +11,9 @@ parameters:
   key2:
     type: "string"
     required: true
+  status:
+    type: "string"
+    required: true
+  id:
+    type: integer
+    required: true
