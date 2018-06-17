@@ -19,4 +19,4 @@
         parameters:
             status: "{{trigger.body.status}}"
             id: "{{trigger.body.id}}"
-            comment: "{{trigger.body.comment}}"
+            comment_text: "{{trigger.body.comment_text}}"

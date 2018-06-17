@@ -4,7 +4,7 @@
             name: "ticket_comment"
             ref: "zendesk.update_ticket"
             parameters:
-              comment_text: "{{comment}}"
+              comment_text: "{{comment_text}}"
               ticket_id: "{{id}}"
               public: true
             on-success: "ticket_status"
