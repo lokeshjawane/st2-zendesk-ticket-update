@@ -14,6 +14,3 @@ parameters:
   id:
     type: integer
     required: true
-  job_status:
-    type: "string"
-    required: true
