@@ -9,10 +9,10 @@
         parameters:
             url: "zendesk"
 
-#    criteria:
-#        trigger.body.name:
-#            pattern: "st2"
-#            type: "equals"
+    criteria:
+        trigger.body.job_status:
+            pattern: "SUCCESS"
+            type: "equals"
 
     action:
         ref: zendesk_tkt.zendesk_tkt_update
